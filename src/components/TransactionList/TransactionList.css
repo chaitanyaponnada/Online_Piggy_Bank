@@ -1,0 +1,36 @@
+.transaction-list-container {
+  text-align: left;
+}
+
+.transaction-list-container h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  color: #1D2939; /* Use primary text color */
+}
+
+.transaction-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-list-container li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #ffffff;
+}
+
+.transaction-list-container li:last-child {
+  border-bottom: none;
+}
+
+.transaction-date {
+color: #ffffff;}
+
+.no-transactions {
+    color: #606770;
+    margin-top: 20px;
+}

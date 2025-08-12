@@ -1,0 +1,102 @@
+/* General App Styling */
+/* Add this line at the top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* --- Your other styles follow --- */
+
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This is the key change for vertical centering */
+  min-height: 100vh;
+  padding: 20px; /* Optional padding for smaller screens */
+  box-sizing: border-box;
+  background-image: url('https://res.cloudinary.com/dybfozdea/image/upload/v1753430047/lastmainbg_lae6hm.png');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+
+}
+
+.app-container {
+  max-width: 500px;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  border-radius: 16px; /* Slightly more rounded corners for the glass effect */
+  
+  /* --- Glassmorphism Styles --- */
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* This blurs the background image behind the container */
+  -webkit-backdrop-filter: blur(10px); /* For Safari browser support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to define the edge */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); /* Soft shadow to lift the element */
+}
+
+header h1 {
+  font-size: 40px;
+  color: #ffffff; /* Use primary text color */
+  margin-bottom: 24px;
+}
+/* Base button style reset */
+button {
+  padding: 10px 22px; /* Increased padding */
+  font-family: 'Inter', sans-serif; /* Consistent font */
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px; /* Softer corners */
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+  /* Smooth transition for all changes */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Clear focus ring for accessibility */
+button:focus-visible {
+  outline: 2px solid #1877f2;
+  outline-offset: 2px;
+}
+
+/* --- Primary Button (e.g., Add Money, Create New) --- */
+.primary-btn {
+  background-color: #1877f2;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn:hover {
+  background-color: #166fe5;
+  transform: translateY(-2px); /* Lifts the button up */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn:active {
+  transform: translateY(0); /* Pushes the button down */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Secondary Button (e.g., Break Bank, Cancel) --- */
+.secondary-btn {
+  background-color: rgba(0, 0, 0, 0.05); /* Very light background */
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.secondary-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
