@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# 🐷 Online Piggy Bank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive **React.js** web application that lets you **save, track, and withdraw money** from a virtual piggy bank.  
+Built with a focus on **simple UI, smooth user experience, and clean component-based design**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Add Money** 💰  
+  Deposit any positive amount into your piggy bank using a modal form with validation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Transaction History** 📜  
+  View all deposits in a clean, chronological list with dates and formatted amounts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Break Piggy Bank** 🔨  
+  Withdraw **all** your savings at once.  
+  Breaking the bank permanently closes it until you start a new one.
 
-### `npm test`
+- **Start New Piggy Bank** 🆕  
+  Once a bank is broken, create a fresh one and start saving again.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Single Active Bank Rule** 🔒  
+  Only one piggy bank can exist at a time — no multiple active banks.
 
-### `npm run build`
+- **Beautiful Modals & UI** 🎨  
+  Friendly visuals with piggy bank images, smooth layouts, and consistent styles.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Frontend**  
+- React.js (Functional Components + Hooks)
+- CSS3 (Modular Component Styles)
+- JavaScript ES6+
 
-### `npm run eject`
+**Utilities**  
+- Custom `formatCurrency` helper for clean money formatting.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧩 Component Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **`AddMoneyModal`** → Modal for entering deposit amount.
+- **`ConfirmBreakModal`** → Confirmation dialog before breaking the bank.
+- **`BrokenView`** → Display after breaking bank (or before first bank creation).
+- **`PiggyBankView`** → Main active bank UI with balance, actions, and transaction list.
+- **`TransactionList`** → Lists all deposits with amount and date.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📂 Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+src/
+├── components/
+│ ├── AddMoneyModal/
+│ │ ├── AddMoneyModal.jsx
+│ │ └── AddMoneyModal.css
+│ ├── ConfirmBreakModal/
+│ │ ├── ConfirmBreakModal.jsx
+│ │ └── ConfirmBreakModal.css
+│ ├── BrokenView/
+│ │ ├── BrokenView.jsx
+│ │ └── BrokenView.css
+│ ├── PiggyBankView/
+│ │ ├── PiggyBankView.jsx
+│ │ └── PiggyBankView.css
+│ └── TransactionList/
+│ ├── TransactionList.jsx
+│ └── TransactionList.css
+├── utils/
+│ └── currencyFormatter.js
+├── App.js
+└── index.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+yaml
+Copy code
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 How to Run Locally
 
-### Analyzing the Bundle Size
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/your-username/online-piggy-bank.git
+   cd online-piggy-bank
+Install Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install
+Run the App
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
+Open in browser:
 
-### Advanced Configuration
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🎯 How It Works
+Start → If no active bank, BrokenView invites you to create one.
 
-### Deployment
+Deposit → Open AddMoneyModal, enter an amount, and confirm.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Track → Every deposit appears in the TransactionList.
 
-### `npm run build` fails to minify
+Break Bank → Open ConfirmBreakModal, confirm to withdraw all.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Restart → Create a new piggy bank and repeat the cycle.
+
+
+👨‍💻 Author
+Chaitanya Ponnada
+Frontend Developer passionate about clean UI, component-based architecture, and creating smooth user experiences.
+
+LinkedIn: https://www.linkedin.com/in/chaitanya-ponnada/
+
+📄 License
+This project is for educational/demo purposes only.
