@@ -19,7 +19,7 @@ function AddMoneyModal({ onSubmit, onClose }) {
       <div className="modal-content">
         {/* --- ADD THIS IMAGE TAG --- */}
         <img
-          src="https://res.cloudinary.com/dybfozdea/image/upload/v1753427724/add_toqswg.png"
+          src="./images/add.png"
           alt="Add Coins"
           className="modal-image"
         />

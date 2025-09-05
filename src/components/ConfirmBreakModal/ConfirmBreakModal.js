@@ -8,7 +8,7 @@ function ConfirmBreakModal({ onConfirm, onClose, balance }) {
       <div className="modal-content">
         {/* --- ADD THIS IMAGE TAG --- */}
         <img
-          src="https://res.cloudinary.com/dybfozdea/image/upload/v1753427724/break_yolgp4.png"
+          src="./images/break.png"
           alt="Breaking Piggy Bank"
           className="modal-image"
         />
