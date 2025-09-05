@@ -19,7 +19,7 @@ function AddMoneyModal({ onSubmit, onClose }) {
       <div className="modal-content">
         {/* --- ADD THIS IMAGE TAG --- */}
         <img
-          src="./images/add.png"
+          src="https://i.postimg.cc/9FrTMgtG/add.png"
           alt="Add Coins"
           className="modal-image"
         />
